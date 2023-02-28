@@ -1,6 +1,4 @@
-import Character from '../Sympols&Iterators/Character';
-
-export default class Team {
+export default class TeamWithGenerator {
   constructor() {
     this.members = new Set();
   }
@@ -30,15 +28,3 @@ export default class Team {
   }
 }
 
-const myTeam = new Team();
-const first = new Character('Marina', 'Bowerman', 50, 50);
-const second = new Character('Ann', 'Daemon', 40, 20);
-const third = new Character('John', 'Daemon', 40, 20);
-
-myTeam.addAll(first, second, third);
-
-/* eslint-disable-next-line */
-for (const person of myTeam) {
-  /* eslint-disable-next-line */
-  console.log('person of myTeam with generator', person);
-}

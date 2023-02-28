@@ -1,5 +1,3 @@
-import Character from './Character';
-
 export default class Team {
   constructor() {
     this.members = new Set();
@@ -44,17 +42,4 @@ export default class Team {
   toArray() {
     this.members = [...this.members];
   }
-}
-
-const myTeam = new Team();
-const first = new Character('Marina', 'Bowerman', 50, 50);
-const second = new Character('Ann', 'Daemon', 40, 20);
-const third = new Character('John', 'Daemon', 40, 20);
-const fourth = new Character('Jane', 'Bowerman', 50, 50);
-myTeam.addAll(first, second, third, fourth);
-
-/* eslint-disable-next-line */
-for (const person of myTeam) {
-  /* eslint-disable-next-line */
-  console.log('person of myTeam ', person);
 }
