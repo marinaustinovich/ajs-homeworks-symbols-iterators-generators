@@ -1,8 +1,8 @@
 import './css/style.css';
 import Team from './js/Sympols&Iterators/iterators';
-import Character from "./js/Sympols&Iterators/Character";
-import TeamWithGenerator from "./js/Sympols&Generators/generators";
-import canIterate from "./js/Generators/app";
+import Character from './js/Sympols&Iterators/Character';
+import TeamWithGenerator from './js/Sympols&Generators/generators';
+import canIterate from './js/Generators/app';
 
 // for the first task
 const myTeam = new Team();
@@ -17,9 +17,6 @@ for (const person of myTeam) {
   /* eslint-disable-next-line */
   console.log('person of myTeam ', person);
 }
-
-
-
 
 // for the second task
 const twoTeam = new TeamWithGenerator();

@@ -12,4 +12,3 @@ export default function canIterate(obj) {
   console.log(result);
   return result;
 }
-

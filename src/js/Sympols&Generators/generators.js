@@ -27,4 +27,3 @@ export default class TeamWithGenerator {
     this.members = [...this.members];
   }
 }
-
