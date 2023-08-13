@@ -1,6 +1,6 @@
 {
   "name": "ajs-homeworks-symbols-iterators-generators",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "three tasts about iterators, generators and Symbols",
   "main": "index.js",
   "scripts": {

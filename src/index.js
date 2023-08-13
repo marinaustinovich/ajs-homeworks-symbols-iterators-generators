@@ -1,36 +1,36 @@
 import './css/style.css';
-import Team from './js/Sympols&Iterators/iterators';
+import Team from './js/Sympols&Iterators/Team';
 import Character from './js/Sympols&Iterators/Character';
-import TeamWithGenerator from './js/Sympols&Generators/generators';
-import canIterate from './js/Generators/app';
+import TeamWithGenerator from './js/Sympols&Generators/TeamWithGenerator';
+import canIterate from './js/Generators/canIterate';
 
 // for the first task
-const myTeam = new Team();
-const first = new Character('Marina', 'Bowerman', 50, 50);
-const second = new Character('Ann', 'Daemon', 40, 20);
-const third = new Character('John', 'Daemon', 40, 20);
-const fourth = new Character('Jane', 'Bowerman', 50, 50);
-myTeam.addAll(first, second, third, fourth);
+const team1 = new Team();
+const first = new Character('Marina', 'Bowerman');
+const second = new Character('Ann', 'Daemon');
+const third = new Character('John', 'Daemon');
+const fourth = new Character('Jane', 'Bowerman');
+team1.addAll(first, second, third, fourth);
 
-/* eslint-disable-next-line */
-for (const person of myTeam) {
+// eslint-disable-next-line no-restricted-syntax
+for (const person of team1) {
   /* eslint-disable-next-line */
-  console.log('person of myTeam ', person);
+  console.log('person of team1 ', person);
 }
 
 // for the second task
-const twoTeam = new TeamWithGenerator();
-twoTeam.addAll(first, second, third);
+const team2 = new TeamWithGenerator();
+team2.addAll(first, second, third);
 
-/* eslint-disable-next-line */
-for (const person of twoTeam) {
+// eslint-disable-next-line no-restricted-syntax
+for (const person of team2) {
   /* eslint-disable-next-line */
-  console.log('person of myTeam with generator', person);
+  console.log('person of team2 with generator', person);
 }
 
 // for the third task
-canIterate(new Map()); // true
-canIterate(new Set()); // true
-canIterate(null); // false
-canIterate(10); // false
-canIterate('Netology'); // true
+console.log(canIterate(new Map())); // true
+console.log(canIterate(new Set())); // true
+console.log(canIterate(null)); // false
+console.log(canIterate(10)); // false
+console.log(canIterate('Netology')); // true

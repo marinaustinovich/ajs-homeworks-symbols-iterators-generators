@@ -4,9 +4,9 @@ export default class TeamWithGenerator {
   }
 
   * [Symbol.iterator]() {
-    this.toArray();
-    for (let i = 0; i < this.members.length; i += 1) {
-      yield this.members[i];
+    const arrayPerson = this.toArray();
+    for (let i = 0; i < arrayPerson.length; i += 1) {
+      yield arrayPerson[i];
     }
   }
 
@@ -24,6 +24,6 @@ export default class TeamWithGenerator {
   }
 
   toArray() {
-    this.members = [...this.members];
+    return [...this.members];
   }
 }

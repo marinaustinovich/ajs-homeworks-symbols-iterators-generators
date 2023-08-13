@@ -4,18 +4,18 @@ export default class Team {
   }
 
   [Symbol.iterator]() {
-    this.toArray();
-    const arrayPerson = this.members;
-    let start = -1;
-    const end = this.members.length - 1;
+    const arrayPerson = this.toArray();
+    let start = 0;
+    const end = arrayPerson.length;
 
     return {
       next() {
         if (start < end) {
+          const value = arrayPerson[start];
           start += 1;
           return {
             done: false,
-            value: arrayPerson[start],
+            value,
           };
         }
 
@@ -40,6 +40,6 @@ export default class Team {
   }
 
   toArray() {
-    this.members = [...this.members];
+    return [...this.members];
   }
 }
